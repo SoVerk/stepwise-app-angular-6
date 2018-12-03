@@ -1,0 +1,6 @@
+<label for="tel" class="bmd-label-floating">Введите номер телефона:</label>
+<input type="tel" id="tel" [(ngModel)]="data.tel" (keypress)="applyMask()" (change)="onChange(name)" maxlength="20"
+       placeholder="+7(900)-000-00-00"
+       value="" class="form-control col-5" [maxlength]="16">
+<div class="err-msg"></div>
+

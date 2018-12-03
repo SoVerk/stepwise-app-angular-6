@@ -1,0 +1,28 @@
+<h3 class="card-header pb-0">
+ Введенные данные:
+</h3>
+<div class="pt-3 card-body">
+  <p>
+  Телефон: <span *ngIf="model.AppData[1].tel">{{model.AppData["1"].tel}}</span>
+    <span *ngIf="!model.AppData[1].tel">Нет данных</span>
+  </p>
+  <p>
+    E-mail: <span *ngIf="model.AppData[2].email">{{model.AppData["2"].email}}</span>
+    <span *ngIf="!model.AppData[2].email">Нет данных</span>
+  </p>
+  <p>
+    Введенный пароль: <span *ngIf="model.AppData[2].password">{{model.AppData["2"].password}}</span>
+    <span *ngIf="!model.AppData[2].password">Нет данных</span>
+  </p>
+  <p>
+    Выбранная страна: <span *ngIf="model.AppData[2].country">{{model.AppData["2"].country}}</span>
+    <span *ngIf="!model.AppData[2].country">Нет данных</span>
+  </p>
+  <p>
+    Дата: <span *ngIf="model.AppData[3].date">{{model.AppData["3"].date}}</span>
+    <span *ngIf="!model.AppData[3].date">Нет данных</span>
+    / Время: <span *ngIf="model.AppData[3].time">{{model.AppData["3"].time}}</span>
+    <span *ngIf="!model.AppData[3].time">Нет данных</span>
+  </p>
+</div>
+

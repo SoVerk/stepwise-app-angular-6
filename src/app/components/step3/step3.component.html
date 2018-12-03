@@ -1,0 +1,32 @@
+<div class="form-group row">
+  <div class="col-4">
+    <label for="time" class="bmd-label">Время:</label>
+    <input type="time" id="time" min="08:00:00" [(ngModel)]="data.time" (change)="onChange(name)" value=""
+           class="form-control">
+    <div class="err-msg"></div>
+  </div>
+  <div class="col-8">
+    <label for="lol" class="bmd-label">Дата:</label>
+    <input type="date" id="lol" min={{minDate}} [(ngModel)]="data.date" (change)="onChange(name)" value=""
+           class="form-control">
+    <div class="err-msg"></div>
+  </div>
+  <div *ngIf="timerUpdate" class="row col-12 mx-auto" style="min-width: 380px;">
+    <div class="container px-0 pt-3 mt-2 mx-0.5 col-3 text-center mt-2">
+      {{timer.days}}
+      <div class="container-fluid bg-warning card-text mt-2">Days</div>
+    </div>
+    <div class="container px-0 pt-3 mt-2 mx-0.5 col-3 text-center mt-2">
+      {{timer.hours}}
+      <div class="container-fluid bg-warning card-text mt-2">Hours</div>
+    </div>
+    <div class="container px-0 pt-3 mt-2 mx-0.5 col-3 text-center mt-2">
+      {{timer.min}}
+      <div class="container-fluid bg-warning card-text mt-2">Minutes</div>
+    </div>
+    <div class="container px-0 pt-3 mt-2 mx-0.5 col-3 text-center mt-2">
+      {{timer.sec}}
+      <div class="container-fluid bg-warning card-text mt-2">Seconds</div>
+    </div>
+  </div>
+</div>

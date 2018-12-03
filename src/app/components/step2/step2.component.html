@@ -1,0 +1,20 @@
+<div class="row col-12 form-group">
+  <div class="col-6">
+    <label for="email" class="bmd-label-floating">E-mail</label>
+    <input type="email" id="email" [(ngModel)]="data.email" (change)="onChange(name)" maxlength="20" value=""
+           class="form-control">
+  </div>
+  <div class="col-6">
+    <label for="password" class="bmd-label-floating">Пароль</label>
+    <input type="password" id="password" [(ngModel)]="data.password" (change)="onChange(name)" maxlength="20" value=""
+           class="form-control">
+  </div>
+  <div class="col-12">
+    <label for="country" class="bmd-label-floating">Выберите страну</label>
+    <select [(ngModel)]="data.country" class="form-control" id="country" (change)="onChange(name)">
+      <option>Не выбрано</option>
+      <option *ngFor="let country of countries">{{country.name}}</option>
+    </select>
+  </div>
+</div>
+
